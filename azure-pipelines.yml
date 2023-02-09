@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: 'b4ea20ef-b0a2-4c3e-94eb-a0f8fe0abc0a'
   imageRepository: 'ikemerrixappswordpress'
   containerRegistry: 'mcdevacr.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/wordpress-apache-php/0.53/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/wordpress-alpine-php/0.9/Dockerfile'
   tag: '$(Build.BuildId)'
 
   # Agent VM image name
