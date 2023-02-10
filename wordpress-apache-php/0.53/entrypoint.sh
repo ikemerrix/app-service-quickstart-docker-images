@@ -27,8 +27,8 @@ start_mariadb(){
     rm -f /tmp/mysql.sock
     ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
 
-    # create default database 'azurelocaldb'
-    mysql -u root -e "CREATE DATABASE IF NOT EXISTS azurelocaldb; FLUSH PRIVILEGES;"
+    # create default database 'wordpress'
+    mysql -u root -e "CREATE DATABASE IF NOT EXISTS wordpress; FLUSH PRIVILEGES;"
 }
 
 #unzip phpmyadmin
@@ -80,7 +80,7 @@ setup_wordpress(){
 
 update_wordpress_config(){    
 	DATABASE_HOST=${DATABASE_HOST:-localhost}
-	DATABASE_NAME=${DATABASE_NAME:-azurelocaldb}
+	DATABASE_NAME=${DATABASE_NAME:-wordpress}
 	# if DATABASE_USERNAME equal phpmyadmin, it means it's nothing at beginning.
 	if [ "${DATABASE_USERNAME}" == "phpmyadmin" ]; then
 	    DATABASE_USERNAME='wordpress'
