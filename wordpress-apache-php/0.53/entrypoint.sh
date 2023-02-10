@@ -80,7 +80,7 @@ setup_wordpress(){
 
 update_wordpress_config(){    
 	DATABASE_HOST=${DATABASE_HOST:-localhost}
-	DATABASE_NAME=${DATABASE_NAME:-wordpress}
+	DATABASE_NAME=${DATABASE_NAME:-azurelocaldb}
 	# if DATABASE_USERNAME equal phpmyadmin, it means it's nothing at beginning.
 	if [ "${DATABASE_USERNAME}" == "phpmyadmin" ]; then
 	    DATABASE_USERNAME='wordpress'
